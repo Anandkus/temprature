@@ -1,0 +1,28 @@
+
+@media(max-width:768px) {
+    .main_header_left{
+        height: auto;
+        margin:5rem 0;
+   
+        
+        
+
+    }
+    
+    .main_header_right{
+        height: auto;
+        margin: 3rem 0;
+    }
+
+    .main_header_right figure img{
+        height: 500px;
+        margin-top: 15%;
+    }
+    .temp_form{
+        width: auto;
+    }
+    .temp-info{
+        width: auto;
+    }
+  
+}

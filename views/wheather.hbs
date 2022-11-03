@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheter app</title>
+{{>link}}
+    
+    <link rel="shortcut icon" href="img/icon.webp" type="image/x-icon">
+</head>
+<body>
+   {{>nav}}
+<!-- end navbar -->
+<div class="container-fluid main_header ">
+    <div class="row " style="">
+<div class="col-md-10 col-12 mx-auto" >
+<div class="main_content ">
+<form action="" class="temp_form ">
+
+<input type="text" id="city" placeholder="Enter Your City Name" autocomplete="off">
+<input type="submit" value="search" id="submitBtn">
+
+</form>
+
+</div>
+
+<div class="temp-info">
+<div class="top_layer">
+  <p id="day">Tuesday</p>  
+  <p id="date">13 octo</p>
+</div>
+<div class="main_layer">
+    <p id="cityname">Get output</p>
+    <div class="middle_layer ">
+
+        <p id="temp"><span>0</span> <sup>o</sup>C</p>
+        <p id="temp_status"><i class="fa fa-cloud " aria-hidden="true"></i></p>
+    </div>
+</div>
+
+    </div>
+  
+   
+</div>
+</div>
+
+</div>
+   
+
+
+<!-- footer -->
+{{>footer}}
+
+<script src="js/main.js"></script>
+
+<script>
+    const get=()=>{
+        const d=new Date()
+      const t= d.getDate()
+      const mont=d.getMonth()
+      const day=d.getDay()
+if(mont>10){
+    document.getElementById("date").innerText=t+"/ "+mont;
+}
+else{
+    document.getElementById("date").innerText=t+"/ 0"+mont;
+}
+
+
+if(day==0){
+    document.getElementById('day').innerText='sunday'
+}
+else if(day==1){
+    document.getElementById('day').innerText='monday'
+}
+else if(day==2){
+    document.getElementById('day').innerText='tuesday'
+}
+else if(day==3){
+    document.getElementById('day').innerText='wednesday'
+}
+else if(day==4){
+    document.getElementById('day').innerText='thursday'
+}
+else if(day==5){
+    document.getElementById('day').innerText='friday'
+}
+else{
+    
+    document.getElementById('day').innerText='saturday'
+}
+}
+    
+    get()
+</script>
+</body>
+</html>
